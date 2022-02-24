@@ -9,7 +9,8 @@ const Searcher = () => {
     characters,
     loading,
     loadNewCharacterList,
-    /*mockCharacters*/ obtainCharacters,
+    /*mockCharacters,*/ 
+    obtainCharacters,
   } = useContext(CharacterContext);
 
   useEffect(() => {

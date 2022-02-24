@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# App Rick y Morty.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instalación:
 
-## Available Scripts
+Cloná el desarrollo y ejecutá la siguiente instrucción:
 
-In the project directory, you can run:
+```
+npm install
+```
 
-### `yarn start`
+```
+npm run start
+```
+No tiene ningún archivo .env.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contexto:
+Este desarrollo lo hice para dar la clase introductoria el curso avanzado de Front End en el instituto Plataforma5.
+Los estudiantes ya vieron en un primer curso React, por este motivo se entiende que comprenden la totalidad del ejercicio.
+Nota: En el curso avanzado se ve Gatsby y GraphQL. Si quieren ver el contenido que creé para ese curso lo podemos hacer en una llamada.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologías:
+React con el inicializador Create-React-App
+Uso de hooks.
+Uso de contexto.
+Consumo de APIs públicas con Axios.
+Uso de algunas funciones nativas de JavaScript para la manipulación de arrays.
+Estilado y animaciones con CSS.
 
-### `yarn test`
+## Propósito:
+A partir la API pública de Rick y Morty se listan los personajes en forma de cards. Éstas están contenidas en un container que, a su vez, tiene un buscador.
+El buscador filtra por nombre de cada personaje.
+El container incluye:
+<ul>
+<li>Un buscador</li>
+<li>Listado de cards (Puede mostrarse información o un skeleton)</li>
+</ul>
+Cada card incluye:
+<ul>
+<li>El nombre del personaje</li>
+<li>Un avatar con la foto del personaje</li>
+<li>El estado del personaje. Si está vivo en color turquesa, si está muerto en rojo y si está indefinido en gris</li>
+<li>Un botón Eliminar. Al presionarlo se quita al personaje del listado. Si el listado se refresca vuelva a aparecer (ya que no podemos manipular directamente al backend)</li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Consideraciones particulares:
+1) 
+La API puede ser peticionada por una IP una determinada cantidad de veces. En caso obtener un error por la cantidad de peticiones se puede optar por DESCOMENTAR la línea 10 de /app.js y COMENTAR la línea 11 de este mismo archivo. 
+Ésto provocará que se cargue un mock con la misma información que se obtiene del endpoint. En caso de querer hacer pruebas en desa es recomendable que lo utilicen.
+ 
+2)
+La API carga muy rápido por lo que no apreciarán el skeleton que contiene el container. Para simular un resultado de cómo se vería este efecto se debe DESCOMENTAR la línea 8 de /src/components/Container/index.js y COMENTAR la línea 10 del mismo archivo.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

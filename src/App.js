@@ -3,16 +3,14 @@ import { Container, Searcher } from "./components";
 import CharacterContext from "./contexts/CharactersContext";
 
 function App() {
-  const { obtainCharacters, characters, mockCharacters } = useContext(
+  const { obtainCharacters, mockCharacters } = useContext(
     CharacterContext
   );
   useEffect(() => {
-    obtainCharacters();
-    //mockCharacters();
+    //obtainCharacters();
+    mockCharacters();
   }, []);
-  useEffect(() => {
-    console.log("App characters", characters);
-  });
+
   return (
     <>
       <Searcher />
